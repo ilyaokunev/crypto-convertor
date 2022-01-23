@@ -5,9 +5,118 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://en.cryptonomist.ch/wp-content/uploads/2021/03/bitcoin-performance-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  align-items: center;
+  margin-top: 20vh;
+}
+
+.header-title {
+  background-color: rgba(230, 230, 230, 0.720);
+  width: 30vw;
+  min-height: 35px;
+  vertical-align: middle;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 3px rgba(248, 248, 248, 0.65);
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  column-gap: 10px;
+}
+
+.input {
+  padding: 5px;
+  font-size: 5vh;
+  width: 30vw;
+  height: 7vh;
+  min-width: 200px;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.input:focus {
+  box-shadow: 0px 0px 5px 2px rgb(74, 198, 240);
+  border-color: rgb(74, 198, 240);
+}
+
+.input:hover {
+  border: 3px solid rgb(74, 146, 240);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 0;
+}
+
+.select {
+  font-size: 2vh;
+  height: 7vh;
+  width: 5vw;
+  min-width: 60px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.select:hover {
+  border-color: rgb(74, 198, 240);
+}
+
+.select:focus {
+  box-shadow: 0px 0px 5px 2px rgb(74, 198, 240);
+  border-color: rgb(74, 198, 240);
+  outline: none;
+}
+
+@media (orientation: portrait) and (max-width: 1024px) {
+  body {
+    background-repeat: repeat-y;
+  }
+  .input {
+    font-size: 3.5vh;
+    height: 5vh;
+    width: 50vw;
+  }
+  .select {
+    font-weight: 600;
+    height: 5vh;
+    width: 12vw;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+  .header-title {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  body {
+background-position: center;
+  }
+  .input {
+    font-size: 4vh;
+    height: 7vh;
+  }
+  .select {
+    font-size: 2.5vh;
+    font-weight: 500;
+    height: 7vh;
+  }
 }
