@@ -1,6 +1,5 @@
 import { cleanup } from '@testing-library/react';
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
 export default function CurrencyRow({currArr, exchangeRates, tokenChange, inputChange}) {
   return (

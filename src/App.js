@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { useState, useEffect } from 'react/cjs/react.development';
+import { useState, useEffect } from 'react';
 import CurrencyRow from './CurrencyRow';
-
 
 function Header() {
   return (
@@ -14,13 +12,13 @@ function Header() {
 
 function Body() {
 
+  let [currArr, setArr] = useState([]);
+  let [lastChangedInput,setLastChangeInput] = useState();
+
   let [exchangeRates, setExRates ] = useState([
     {id: 0, rate: 1, symbol: 'USD', amount: ''},
     {id: 1, rate: 1, symbol: 'USD', amount: ''}
   ]);
-
-  let [currArr, setArr] = useState([]);
-  let [lastChangedInput,setLastChangeInput] = useState();
 
   useEffect(() => {
     let cleanup = false;
