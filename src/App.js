@@ -44,7 +44,7 @@ function Body() {
         let actualToken = currArr.filter(token => token.symbol === value)[0];
         newRates[id].rate =  actualToken.quote.USD.price;
       }
-      if (lastChangedInput) amountChange(lastChangedInput, exchangeRates[lastChangedInput].amount);
+      if (lastChangedInput !== undefined) amountChange(lastChangedInput, newRates[lastChangedInput].amount); 
       return newRates;
     });
   }
